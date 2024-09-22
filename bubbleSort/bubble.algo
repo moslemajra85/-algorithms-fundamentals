@@ -1,0 +1,13 @@
+ PROCEDURE bubbleSort(var arr: Array_Of_Integer)
+ VAR
+    temp: Integer;
+    n: Integer;
+    i,j: Integer;
+
+ BEGIN
+    
+    For i From 0 To n - 1 Step  1 Do
+        for j From 0 to n - i - 1 Do
+            if(arr[j] > arr[j+1])
+
+ END

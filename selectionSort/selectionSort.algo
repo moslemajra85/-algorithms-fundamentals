@@ -1,0 +1,36 @@
+PROCEDURE swap(var item1: Integer, var item2: Integer)
+VAR
+    temp: Integer;
+BEGIN
+    temp := item1;
+    item1 := item2;
+    item2 := temp;
+END
+
+
+PROCEDURE selection_Sort(VAR arr: Array_Of_Integer, var n: Integer)
+
+VAR
+    min_index: Integer;
+    i,j : Integer;
+
+ BEGIN
+    
+    For i FROM 0 To n -1 Do
+        min_index := i;
+        // prove me wrong, show me if there is another
+        // element in the array with a lower value
+        For j FROM i + 1 To n - 1 Do
+            if(arr[j] < arr[min_index])
+                min_index = j;
+             END_IF
+        END_FOR
+
+        If(min_index <> i)
+            swap(i, min_index)
+        END_IF
+    END_FOR
+
+    Print(arr);
+END
+
