@@ -1,0 +1,163 @@
+ALGORITHM add_two_numbers
+VAR
+    //a, b, c: Integer;
+    a: Integer;                     
+    b: Integer;
+    s: Integer;
+BEGIN
+    Read(a);
+    Read(b);
+
+    s := a + b;    // s = a + b
+
+    Print(s)
+END
+
+ALGORITHM add_three_numbers
+VAR
+    a,b,c:Integer;
+    s: Integer;
+
+BEGIN
+
+    Read(a);
+    Read(b);
+    Read(c);
+
+    s := a  + b +c;
+
+    Print(s)
+
+   
+END
+
+
+ALGORITHM variables
+VAR
+    a: Integer;
+    b: Float;
+    c: Char;
+    d: String;
+    e: Boolean
+
+BEGIN
+
+    a := 1; // correct
+    a := 2.5 // wrong
+
+    b := 2.2; // correct
+    b := 5; // correct
+
+    c := 'A'; // correct
+    c := 'abc' // wrong
+
+    d := "hello"; // correct
+    d := 'Hello'; // wrong
+    d: = 'A'; // wrong
+
+    e := true 
+END
+
+
+/*
+    1 --> "Red"
+    2 --> "Green"
+    3 --> "Blue"
+    other --> "Unknow color"
+*/
+
+ALGORITHM color_code
+VAR
+    code: Integer;
+BEGIN
+    
+    switch(code) Do
+        case 1: 
+            Print("Red");
+            break;
+
+        case 2:
+            Print("Green");
+            break;
+
+        case 3: 
+           Print("Blue");
+           break;
+
+       default:
+          Print("Unknown Color");
+          break;
+    END_SWITCH
+END
+
+/*
+    age < 10  --> price = price /2
+    age > 10 --> real price 
+*/
+
+ALGORITHM  ticket
+VAR
+    age: Integer;
+CONST
+    ticket_price : Float = 100;
+BEGIN
+    Read(age);
+
+    If(age <= 10) Then
+        Print(ticket_price/2);
+    Else
+        Print(ticket_price);
+    END_IF
+
+END
+
+/* 
+ Sum Of the first 10 numbers
+
+  1 + 2 + 3 + ... + 10
+
+*/
+
+ALGORITHM Sum_ten_numbers
+VAR
+   i: Integer;
+   sum: Integer := 0;
+BEGIN
+    
+    For i FROM 0 To 10 DO
+        sum += i;
+
+    END_FOR
+
+    Print(sum);
+END
+
+
+PROCEDURE countDivision(a: Integer)
+VAR
+    count: Integer := 0
+ BEGIN
+    
+    While(a % 2 === 0) DO
+        a := a / 2;
+        count := count + 1; 
+    END_WHILE  
+
+    Print(Count);
+END
+
+
+// get age from user
+ALGORITHM get_age
+VAR
+    age: Integer;
+BEGIN
+    Read(age);
+
+    REPEAT
+        Print("Enter Your age: ")
+    UNTIL (age <= 0)
+END
+
+
+ 
