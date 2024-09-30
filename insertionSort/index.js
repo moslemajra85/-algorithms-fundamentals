@@ -9,14 +9,19 @@ function insertionSort(arr) {
     // of the sorted poriton of the array
     // if the current element is less than the element being compared
     // it shifts the that element one position to the right to make space
-    // for current element to be inserted
+    // for current element to be 
+    
+    // this loop will stop if we bypass index 0 or find an element
+    // less than the currentElement
     while (j >= 0 && arr[j] > currentElement) {
-      array[j + 1] = arr[j];
+      arr[j + 1] = arr[j];
       j--;
     }
 
     arr[j + 1] = currentElement;
   }
+
+  
 
   return arr;
 }
